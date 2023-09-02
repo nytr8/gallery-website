@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;600;800&display=swap");
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+
+a {
+    display: block;
+    text-decoration: none;
+
+}
+
+.background {
+    position: absolute;
+    z-index: -1;
+    font-size: 25rem;
+    top: 95%;
+    left: 2%;
+    right: 98%;
+    transform: translatey(-50%);
+    transform: rotate(-90deg);
+    font-weight: 600;
+    color: rgb(49, 49, 49);
+    opacity: .5;
+
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Bodoni Moda', serif;
+    background: linear-gradient(-146deg, rgba(41, 41, 41, 1) 0%, rgba(0, 206, 255, 1) 100%);
+    background: radial-gradient(circle, rgba(82, 179, 255, 1) 0%, rgba(27, 58, 83, 1) 100%) fixed;
+
+
+}
+
+.main-div {
+    display: flex;
+    align-items: center;
+    margin-block: auto;
+    height: 100vh;
+    width: 90vw;
+    margin-inline: auto;
+    justify-content: space-evenly;
+
+}
+
+.grid-left {
+    width: 40%;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(24, 24, 24, 0.281);
+}
+
+.grid-left h1 {
+    font-size: 5rem;
+    text-transform: capitalize;
+}
+
+.grid-left p {
+
+    padding: 15px 35px;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    /* color: white; */
+    font-weight: 500;
+}
+
+.grid-right {
+    gap: 10px;
+    /* flex-basis: 50%; */
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 130px);
+
+}
+
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 20px black;
+    font-size: 1.2rem;
+    background-size: cover;
+    text-transform: capitalize;
+    background-color: #222;
+    background-blend-mode: color-dodge;
+    transition: all .5s ease-in-out;
+    border-radius: 5px;
+    background-position: top;
+}
+
+.box:hover {
+    cursor: pointer;
+    transform: scale(102%);
+    background-position: bottom;
+    background-color: #ffffff1c;
+    box-shadow: 0 0 5px white;
+}
+
+/* utility class-------------------------? */
+
+.col-2 {
+    grid-column: span 2;
+}
+
+.row-2 {
+    grid-row: span 2;
+}
+
+@media screen and (max-width:956px) {
+    .main-div {
+        flex-wrap: wrap;
+
+    }
+
+    .grid-right {
+        gap: 20px;
+        padding-block: 30px;
+        width: 90%;
+        display: grid;
+        grid-template-columns: 2.5fr;
+        grid-template-rows: repeat(7, 150px);
+    }
+
+    .row-2 {
+        grid-row: span 1;
+    }
+
+    .col-2 {
+        grid-column: span 1;
+    }
+
+    body {
+        overflow: auto;
+
+    }
+
+    .background {
+        top: 200%;
+        color: rgba(255, 255, 255, 0.082);
+    }
+
+    .grid-left {
+        width: 80%;
+        padding-top: 50px;
+        padding-inline: 0px;
+    }
+
+    .grid-left h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .grid-left p {
+        font-size: 1.3rem;
+        padding-inline: 15px;
+        margin-block: 20px;
+    }
+
+    .grid-left h1 {
+        font-size: 3rem;
+    }
+
+}
